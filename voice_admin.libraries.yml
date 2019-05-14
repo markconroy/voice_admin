@@ -1,0 +1,3 @@
+voice_admin:
+  js:
+    js/voice_admin.js: {}

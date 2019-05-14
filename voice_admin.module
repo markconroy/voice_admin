@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Contains voice_admin.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function voice_admin_page_attachments(array &$page) {
+  $page['#attached']['library'][] = 'voice_admin/voice_admin';
+}
+
+/**
+ * Implements hook_help().
+ */
+function voice_admin_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the voice_admin module.
+    case 'help.page.voice_admin':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A module to allow you to administer your Drupal website with your voice.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

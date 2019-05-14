@@ -1,0 +1,9 @@
+name: 'Voice Admin'
+type: module
+description: 'A module to allow you to administer your Drupal website with your voice.'
+core: 8.x
+package: 'Custom'
+
+# Libraries
+libraries:
+  - voice_admin/voice_admin
